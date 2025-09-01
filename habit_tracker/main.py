@@ -1,8 +1,8 @@
 import requests
 import datetime as dt
 pixela_endpoint= "https://pixe.la/v1/users"
-TOKEN = "erenyeager"
-USERNAME = "katsuoeren"
+TOKEN = name
+USERNAME = username
 ID =  "graph1"
 # parameters = {
 #     "token": ,
@@ -42,4 +42,5 @@ paramerters = {
 }
 graph_put_endpoint = f"{graph_post_endpoint}/{date}"
 response = requests.delete(url = graph_put_endpoint,headers=headers)
+
 print(response.text)
