@@ -3,12 +3,12 @@ import requests
 from twilio.rest import Client
 
 url = "https://newsapi.org/v2/everything"
-api_key = "e3539860c7a941f28e0a1f0e37730de4"
+api_key = API_KEY
 COMPANY_NAME = "Tesla Inc"
 STOCKS = "TSLA"
 #twilio info
-account_sid = "ACefc1cd35f67eaef9ff1120ebd3311b53"
-auth_token = "ff0701de10dcf2172adc0bc632b02555"
+account_sid = ACCOUNT_SID
+auth_token = AUTH_TOKEN
 
 #getting the stock prices
 tesla = yf.Ticker(STOCKS)
@@ -39,8 +39,8 @@ def news():
 
         client = Client(account_sid,auth_token)
         message = client.messages.create(
-            from_='whatsapp:+14155238886',
-            to='whatsapp:+917892453007',
+            from_='whatsapp:NUMBER',
+            to='whatsapp:NUMBER',
             body=f'{STOCKS}: {change_mark}{percentage}\n headline: {hint}\n brief: {brief}\n\n'
         )
         print(message.status)
@@ -48,4 +48,5 @@ def news():
 if percentage > 2:
     news()
 else:
+
     print(f"stocks are decreasing")
