@@ -2,11 +2,11 @@ import requests
 import os
 from twilio.rest import Client
 
-account_sid = "ACefc1cd35f67eaef9ff1120ebd3311b53"
-auth_token = "ff0701de10dcf2172adc0bc632b02555"
+account_sid = "ACCOUNT_SID"
+auth_token = "AUTH_TOKEN"
 
 url = "https://api.openweathermap.org/data/2.5/forecast"
-api_key = "d817056289e1882502b27cd891a0f279"
+api_key = "API_KEY"
 
 params = {
     "lat": 12.971599,
@@ -32,10 +32,11 @@ for data in weather_data['list']:
 if is_raining:
     client = Client(account_sid,auth_token)
     message = client.messages.create(
-        from_='whatsapp:+14155238886',
-        to='whatsapp:+917892453007',
+        from_='whatsapp:NUMBER',
+        to='whatsapp: NUMBER',
         body = "weather is kinda cloudy better wear warm clothes 🧥🧥"
     )
     print(message.status)
+
 
 
