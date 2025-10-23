@@ -22,8 +22,8 @@ with open(let) as file:
     smtg = dt.datetime.now()
     time = dt.datetime(year= year, month= month, day= day)
 
-    my_email = "vignesh13006@gmail.com"
-    password = "ucda taxb moxo afpo"
+    my_email = "[test@gmail.com]"
+    password = "[password]"
 
     if smtg.month == time.month and smtg.year == time.year and smtg.day == time.day:
         with smtplib.SMTP("smtp.gmail.com", 587) as connection:
