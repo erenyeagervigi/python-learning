@@ -6,8 +6,8 @@ import smtplib
 
 MY_LAT = 12.996140
 MY_LONG = 77.672310
-MY_EMAIL = "vignesh13006@gmail.com"
-PASSWORD =  "ucda taxb moxo afpo"
+MY_EMAIL = "[test@gmail.com]"
+PASSWORD =  "[password]"
 
 response = requests.get(url="http://api.open-notify.org/iss-now.json")
 response.raise_for_status()
